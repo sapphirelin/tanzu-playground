@@ -4,17 +4,16 @@ a simple client-server minio, for demo only.
 
 ### Kubernetes Cluster
 - must have default storage class
-```
-$ kubectl get sc
-```
+  ```
+  $ kubectl get sc
+  ```
 - harbor CA installed if needed
 
 ### Harbor
 - a project name: `minio`, allow docker pull/push.
 
-
-## Start Deploy
-0. Push these images in the project: `minio-latest.tar` and `mc-latest.tar`
+### Get minio images (私訊提供連結)
+- push these images in the project: `minio-latest.tar` and `mc-latest.tar`
   ```
   $ docker load -i minio-latest.tar
   $ docker load -i mc-latest.tar
@@ -25,6 +24,10 @@ $ kubectl get sc
   $ docker push harbor.example.com/minio/minio:latest
   $ docker push harbor.example.com/minio/mc:latest
   ```
+
+
+## Start Deploy
+
 1. Change Registry URL as yours e.g. harbor.example.com
   ```
   $ sed -i 's#REGISTRY_URL#harbor.example.com#g' minio-template.yaml
