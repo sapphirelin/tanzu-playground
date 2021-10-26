@@ -1,3 +1,5 @@
+a simple client-server minio, for demo only.
+
 ## Prerequisites
 
 ### Kubernetes Cluster
