@@ -12,7 +12,7 @@ a simple client-server minio, for demo only.
 ### Harbor
 - a project name: `minio`, allow docker pull/push.
 
-### Get minio images (私訊提供連結)
+### Get minio images (提供連結下載)
 - push these images in the project: `minio-latest.tar` and `mc-latest.tar`
   ```
   $ docker load -i minio-latest.tar
