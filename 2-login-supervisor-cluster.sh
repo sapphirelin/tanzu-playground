@@ -1,4 +1,4 @@
-## 2 Login to wcp (Tanzu Supervisior Cluster)
+## 2. Login to wcp (Tanzu Supervisior Cluster)
 
 export SCP=192.168.30.34
 export TKC_NS=first-ns
