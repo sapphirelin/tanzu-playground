@@ -1,0 +1,5 @@
+# 3. Create TKC (Tanzu Kubernetes Cluster)
+
+kubectl apply -f ./template/sample-tkc.yml
+
+kubectl get tkc -o wide
