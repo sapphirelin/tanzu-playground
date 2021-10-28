@@ -12,7 +12,7 @@ spec:
       storageClass: k8s-storage-policy
       tkr:  
         reference:
-          name: v1.21.2---vmware.1-tkg.1.13da849
+          name: v1.21.2---vmware.1-tkg.1.ee25d55
     nodePools:                                      # nodePools is an array that describes a group of worker nodes in the cluster with the same configuration
     - name: worker-nodepool-a1                      # name of worker node pool
       replicas: 3
@@ -20,7 +20,7 @@ spec:
       storageClass: k8s-storage-policy
       tkr:  
         reference:
-          name: v1.21.2---vmware.1-tkg.1.13da849
+          name: v1.21.2---vmware.1-tkg.1.ee25d55
   settings:
     storage:
       defaultClass: k8s-storage-policy
