@@ -1,4 +1,4 @@
-# 4. Create TKC (Tanzu Kubernetes Cluster)
+## 4. Create TKC (Tanzu Kubernetes Cluster)
 
 kubectl apply -f ./template/simple-tkc.yaml
 
