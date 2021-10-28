@@ -1,0 +1,30 @@
+---
+apiVersion: run.tanzu.vmware.com/v1alpha1
+kind: TanzuKubernetesCluster
+metadata:
+  name: tkc-01
+  namespace: first-ns
+spec:
+  distribution:
+    version: v1.20
+  topology:
+    controlPlane:
+      count: 1
+      class: best-effort-small
+      storageClass: k8s-storage-policy
+    workers:
+      count: 3
+      class: best-effort-medium
+      storageClass: k8s-storage-policy
+  settings:
+    storage:
+      classes:
+      - k8s-storage-policy
+      defaultClass: k8s-storage-policy
+    network:
+      cni:
+        name: antrea #or calico
+      pods:
+        cidrBlocks: ["10.51.0.0/16"]
+      services:
+        cidrBlocks: ["10.52.0.0/16"]
