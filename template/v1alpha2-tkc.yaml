@@ -1,0 +1,26 @@
+---
+apiVersion: run.tanzu.vmware.com/v1alpha2
+kind: TanzuKubernetesCluster
+metadata:
+  name: tkc-v2-01
+  namespace: first-ns
+spec:
+  topology:
+    controlPlane:
+      replicas: 1
+      vmClass: best-effort-small
+      storageClass: k8s-storage-policy
+      tkr:  
+        reference:
+          name: v1.21.2---vmware.1-tkg.1.13da849
+    nodePools:                                      # nodePools is an array that describes a group of worker nodes in the cluster with the same configuration
+    - name: worker-nodepool-a1                      # name of worker node pool
+      replicas: 3
+      vmClass: best-effort-medium
+      storageClass: k8s-storage-policy
+      tkr:  
+        reference:
+          name: v1.21.2---vmware.1-tkg.1.13da849
+  settings:
+    storage:
+      defaultClass: k8s-storage-policy
