@@ -1,7 +1,8 @@
-### list all vSphere Supervisor Namespace (TKC_NS)
+## 3. Check vSphere Supervisor Namespace
+### list all contexts (Supervisor Cluster and all vSphere Supervisor Namespace)
 kubectl config get-contexts
 
-### Check TKC_NS Settings
+### Check vSphere Supervisor Namespace
 kubectl describe ns $TKC_NS
 
 
