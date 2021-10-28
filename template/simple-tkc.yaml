@@ -6,7 +6,7 @@ metadata:
   namespace: first-ns
 spec:
   distribution:
-    version: v1.20
+    version: v1.20.9  # 1.20.9 = photon & 1.20.8 = ubuntu
   topology:
     controlPlane:
       count: 1
@@ -20,4 +20,4 @@ spec:
     storage:
       classes:
       - k8s-storage-policy
-      defaultClass: k8s-storage-policy  #recommended
+      defaultClass: k8s-storage-policy
