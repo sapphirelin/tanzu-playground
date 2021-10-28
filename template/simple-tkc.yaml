@@ -20,4 +20,4 @@ spec:
     storage:
       classes:
       - k8s-storage-policy
-      defaultClass: k8s-storage-policy
+      defaultClass: k8s-storage-policy  #recommended
